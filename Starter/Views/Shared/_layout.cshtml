@@ -9,17 +9,8 @@
     <meta name="viewport" content="width=device-width" />
     <title>@(ViewBag.Title ?? "No Title Set")</title>
     @Styles.Render(BundleNames.BootStrapBase)
-    <style>
-        .fixed-to-bottom {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 9em;
-            background-color: lightgray;
-            padding: 20px;
-            min-width: 100%;
-        }
-    </style>
+    @Styles.Render(BundleNames.SiteCss)
+    
 </head>
 <body>
     <div class="container">
@@ -38,7 +29,7 @@
             @RenderBody()
         </section>
     </div>
-    <div class="container-fluid fixed-to-bottom">
+    <div class="container-fluid footer">
         <p>This is the footer.</p>
     </div>
 </body>

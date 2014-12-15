@@ -11,13 +11,16 @@ namespace Starter.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             // css bundles
-            bundles.Add(new StyleBundle(BundleNames.BootStrapBase).Include("~/Content/bootstrap.css"));
+            // use JUST a new Bundle for files that already have minified versions. Use ScriptBundle or StyleBundle to minify. I'm using WebEssentials to minify, so I'll just use Bundle
+            bundles.Add(new Bundle(BundleNames.BootStrapBase).Include("~/Content/bootstrap.css"));
+            bundles.Add(new Bundle(BundleNames.SiteCss).Include("~/Content/Site.css"));
             // js bundles
         }
     }
 
     public static class BundleNames
     {
-        public static string BootStrapBase = "~/bundles/bootstrap";
+        public static string BootStrapBase = "~/Content/bootstrap";
+        public static string SiteCss = "~/Content/site";
     }
 }
