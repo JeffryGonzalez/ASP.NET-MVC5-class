@@ -12,7 +12,7 @@
     <style>
         .fixed-to-bottom {
             position: absolute;
-            bottom:0;
+            bottom: 0;
             left: 0;
             height: 9em;
             background-color: lightgray;
@@ -34,7 +34,9 @@
                 <li><a href="#">Yet Another</a></li>
             </ul>
         </nav>
-        @RenderBody()
+        <section>
+            @RenderBody()
+        </section>
     </div>
     <div class="container-fluid fixed-to-bottom">
         <p>This is the footer.</p>
