@@ -17,7 +17,14 @@ namespace Starter.Controllers
 
         public ActionResult Create(NewRegistration registration)
         {
-            return null;
+            if (!ModelState.IsValid)
+            {
+                return View("New", registration);
+            }
+            else
+            {
+                return RedirectToAction("Thanks", registration);
+            }
         }
     }
 }

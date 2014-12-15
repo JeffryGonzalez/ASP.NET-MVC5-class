@@ -1,7 +1,12 @@
-﻿@model dynamic
+﻿@model Starter.Models.NewsletterRegistration.NewRegistration
 
 @{
     ViewBag.Title = "title";
 }
 
-<h2>title</h2>
+@using (Html.BeginForm("Create", "NewsLetterRegistration", FormMethod.Post))
+{
+    @Html.EditorForModel();
+    <input type="submit" value="Register!"/>
+ @UiHelpers.InputRow("Dog", "Cat")
+}

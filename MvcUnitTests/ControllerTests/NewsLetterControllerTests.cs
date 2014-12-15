@@ -50,6 +50,31 @@ namespace MvcUnitTests.ControllerTests
 
             var result = _controller.Create(registration) as ViewResult;
         }
+
+        [TestMethod]
+        public void ReturnsBackToNewIfModelStateErrors()
+        {
+            var registration = new NewRegistration();
+
+            _controller.ModelState.AddModelError("x","some error");
+
+            var result = _controller.Create(registration) as ViewResult;
+
+            Assert.AreEqual("New", result.ViewName );
+
+        }
+
+        [TestMethod]
+        public void ReturnsThanksViewIfNoModelStateErrors()
+        {
+            var registration = new NewRegistration() {FirstName = "George"};
+
+            var result = _controller.Create(registration) as RedirectToRouteResult;
+            Assert.IsFalse(result.Permanent);
+            Assert.AreEqual("Thanks", result.RouteValues["action"]);
+            //Assert.AreEqual("NewsLetterController", result.RouteValues["controller"]); If on a different controller
+            Assert.AreEqual("George", result.RouteValues["FirstName"]);
+        }
     }
 
     [TestClass]
@@ -83,5 +108,6 @@ namespace MvcUnitTests.ControllerTests
             Assert.AreEqual("First Name Must Be Provided", attrib.ErrorMessage);
         }
     }
+
 
 }
