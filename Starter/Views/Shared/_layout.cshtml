@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@(ViewBag.Title ?? "No Title Set")</title>
+    @Styles.Render(BundleNames.BootStrapBase)
+    <style>
+        .fixed-to-bottom {
+            position: absolute;
+            bottom:0;
+            left: 0;
+            height: 9em;
+            background-color: lightgray;
+            padding: 20px;
+            min-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <h1>ASP.NET MVC Rocks!</h1>
+        </header>
+        <nav>
+            <ul class="nav nav-tabs nav-justified">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Something Else</a></li>
+                <li><a href="#">Another Thing</a></li>
+                <li><a href="#">Yet Another</a></li>
+            </ul>
+        </nav>
+        @RenderBody()
+    </div>
+    <div class="container-fluid fixed-to-bottom">
+        <p>This is the footer.</p>
+    </div>
+</body>
+</html>
