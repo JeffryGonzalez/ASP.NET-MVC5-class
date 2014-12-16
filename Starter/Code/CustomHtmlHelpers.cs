@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Mvc.Html;
 
 namespace Starter.Code
 {
@@ -20,6 +21,10 @@ namespace Starter.Code
             var label = new TagBuilder("label");
             label.SetInnerText(labelText);
             parentDiv.InnerHtml += label.ToString();
+
+            var input = helper.TextBox(metaData.PropertyName, metaData.Model, new {@class="form-control"}).ToString();
+            parentDiv.InnerHtml += input.ToString();
+
             return new HtmlString(parentDiv.ToString());
 
         }
