@@ -1,4 +1,4 @@
-.fixed-to-bottom {
+﻿.fixed-to-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -16,3 +16,7 @@
   padding: 20px;
   min-width: 100%;
 }
+.help-block-error {
+  color: red;
+}
+/*# sourceMappingURL=Site.css.map */

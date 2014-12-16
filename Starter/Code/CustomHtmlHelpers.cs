@@ -34,6 +34,7 @@ namespace Starter.Code
 
 			var alertDiv = new TagBuilder("div");
 			alertDiv.AddCssClass("help-block");
+			alertDiv.AddCssClass("help-block-error");
 			alertDiv.InnerHtml += helper.ValidationMessage(metaData.PropertyName);
 
 			parentDiv.InnerHtml += alertDiv.ToString();

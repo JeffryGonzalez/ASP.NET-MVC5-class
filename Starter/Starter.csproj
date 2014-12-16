@@ -144,6 +144,9 @@
     <Content Include="Content\Site.less" />
     <Content Include="app.config" />
     <Content Include="App_Code\UiHelpers.cshtml" />
+    <Content Include="Content\Site.css.map">
+      <DependentUpon>Site.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.9.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
