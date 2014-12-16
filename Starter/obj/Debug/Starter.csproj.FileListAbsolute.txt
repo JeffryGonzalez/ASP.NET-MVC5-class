@@ -1,3 +1,4 @@
+c:\dev\StarterSolution\Starter\obj\Debug\Starter.csprojResolveAssemblyReference.cache
 c:\dev\StarterSolution\Starter\bin\AutoMapper.Net4.dll
 c:\dev\StarterSolution\Starter\bin\Starter.dll.config
 c:\dev\StarterSolution\Starter\bin\Starter.dll
@@ -36,6 +37,5 @@ c:\dev\StarterSolution\Starter\bin\System.Web.Razor.xml
 c:\dev\StarterSolution\Starter\bin\System.Web.WebPages.xml
 c:\dev\StarterSolution\Starter\bin\System.Web.WebPages.Deployment.xml
 c:\dev\StarterSolution\Starter\bin\System.Web.WebPages.Razor.xml
-c:\dev\StarterSolution\Starter\obj\Debug\Starter.csprojResolveAssemblyReference.cache
 c:\dev\StarterSolution\Starter\obj\Debug\Starter.dll
 c:\dev\StarterSolution\Starter\obj\Debug\Starter.pdb
