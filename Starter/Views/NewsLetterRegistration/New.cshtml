@@ -2,12 +2,23 @@
 @model Starter.Models.NewsletterRegistration.NewRegistration
 
 @{
-    ViewBag.Title = "title";
+	ViewBag.Title = "title";
 }
 
-@using (Html.BeginForm("Create", "NewsLetterRegistration", FormMethod.Post))
-{
-    @Html.EditorForModel();
-    <input type="submit" value="Register!"/>
-}
-@Html.MakeInputGroup(m=>m.FirstName)
+<div class="col-sm-6 col-sm-offset-3">
+	@using (Html.BeginForm("Create", "NewsLetterRegistration", FormMethod.Post))
+	{
+		@Html.MakeInputTextGroup(m => m.FirstName)
+		@Html.MakeInputTextGroup(m => m.LastName)
+		@Html.MakeInputTextGroup(m => m.EmailAddress)
+
+		<div class="checkbox">
+			<label>
+				@Html.CheckBoxFor(m => m.ReceiveDailyEmail) @Html.GetDisplayNameFor(m => m.ReceiveDailyEmail)
+			
+			</label>
+		</div>
+
+		<input type="submit" value="Register!" />
+	}
+</div>
