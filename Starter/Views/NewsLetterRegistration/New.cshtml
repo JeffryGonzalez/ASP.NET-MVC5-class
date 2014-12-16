@@ -1,4 +1,5 @@
 ﻿@using Starter.Code
+@using Starter.Code.Mvc
 @model Starter.Models.NewsletterRegistration.NewRegistration
 
 @{
@@ -15,7 +16,6 @@
 		<div class="checkbox">
 			<label>
 				@Html.CheckBoxFor(m => m.ReceiveDailyEmail) @Html.GetDisplayNameFor(m => m.ReceiveDailyEmail)
-			
 			</label>
 		</div>
 

@@ -8,6 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Newtonsoft.Json.Serialization;
 using Starter.Code;
+using Starter.Code.Mvc;
 
 namespace Starter
 {
