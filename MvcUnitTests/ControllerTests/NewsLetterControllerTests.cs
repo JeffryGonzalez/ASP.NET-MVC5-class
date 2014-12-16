@@ -2,6 +2,8 @@
 using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Rhino.Mocks;
+using Starter.Code.Interfaces;
 using Starter.Controllers;
 using Starter.Models.NewsletterRegistration;
 
@@ -11,11 +13,13 @@ namespace MvcUnitTests.ControllerTests
 	public class NewsLetterControllerTests
 	{
 		private NewsLetterRegistrationController _controller;
+		private ICreateNewsletterRegistrations _registrar;
 
 		[TestInitialize]
 		public void Setup()
 		{
-			_controller = new NewsLetterRegistrationController();
+			_registrar = MockRepository.GenerateMock<ICreateNewsletterRegistrations>();
+			_controller = new NewsLetterRegistrationController(_registrar);
 		}
 		[TestMethod]
 		public void NewReturnsAView()
@@ -72,8 +76,6 @@ namespace MvcUnitTests.ControllerTests
 			var result = _controller.Create(registration) as RedirectToRouteResult;
 			Assert.IsFalse(result.Permanent);
 			Assert.AreEqual("Thanks", result.RouteValues["action"]);
-			//Assert.AreEqual("NewsLetterController", result.RouteValues["controller"]); If on a different controller
-			Assert.AreEqual("George", result.RouteValues["FirstName"]);
 		}
 
 		[TestMethod]
@@ -83,9 +85,18 @@ namespace MvcUnitTests.ControllerTests
 
 			var result = _controller.Create(registration);
 
-
+			_registrar.AssertWasCalled(r=>r.Create(registration));
 		}
 
+		[TestMethod]
+		public void AddsRegistrationToTempData()
+		{
+			var registration = new NewRegistration();
+
+			var result = _controller.Create(registration) as RedirectToRouteResult;
+
+			Assert.IsTrue(_controller.TempData.ContainsKey("confirmation"));
+		}
 
 	}
 

@@ -166,7 +166,9 @@
     <Compile Include="Code\Mvc\DefaultToCamelCaseMetadataProvider.cs" />
     <Compile Include="Code\Mvc\CustomHtmlHelpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Code\Interfaces\ICreateNewsletterRegistrations.cs" />
     <Compile Include="Controllers\NewsLetterRegistrationController.cs" />
+    <Compile Include="Domain\EmailNewsLetterRegistrar.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -184,6 +186,7 @@
     <Content Include="Views\Shared\_layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\NewsLetterRegistration\New.cshtml" />
+    <Content Include="Views\NewsLetterRegistration\Thanks.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -193,7 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Code\Interfaces\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

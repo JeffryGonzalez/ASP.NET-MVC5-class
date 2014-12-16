@@ -1,0 +1,16 @@
+﻿@model Starter.Models.NewsletterRegistration.NewRegistration
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h2>Thanks, @Model.FirstName @Model.LastName</h2>
+@if (Model.ReceiveDailyEmail)
+{
+	<p>You will receive daily email at @Model.EmailAddress.</p>
+}
+else
+{
+	<p>You have elected to not recieve daily emails.</p>
+}
+
