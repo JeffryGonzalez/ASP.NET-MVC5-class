@@ -80,3 +80,10 @@ C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\bin\System.Web.Web
 C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\obj\Debug\Starter.dll
 C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\obj\Debug\Starter.pdb
 C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\obj\Debug\Starter.csprojResolveAssemblyReference.cache
+C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\bin\EntityFramework.dll
+C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\bin\EntityFramework.SqlServer.dll
+C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\bin\EntityFramework.xml
+C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\bin\EntityFramework.SqlServer.xml
+C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\obj\Debug\Starter.Migrations.initial.resources
+C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\obj\Debug\Starter.csproj.GenerateResource.Cache
+C:\Users\Jeffry\OneDrive\class\MVC\ASP.NET-MVC5-class\Starter\bin\MvcCheckBoxList.dll

@@ -1,0 +1,17 @@
+﻿
+<ul class="list-unstyled">
+	@foreach (var room in Model)
+	{
+		<li class="well">
+			<h3>@room.Description</h3>
+			<p>Holds @room.NumberOfPeople people.</p>
+			<ul class="list-unstyled list-inline">
+				@foreach (var capability in room.Capabilities)
+				{
+					<li><span class="glyphicon glyphicon-ok"></span> @capability</li>
+				}
+			</ul>
+		</li>
+	}
+
+</ul>

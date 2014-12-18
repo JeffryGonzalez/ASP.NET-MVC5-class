@@ -12,14 +12,15 @@ using Starter.Code.Mvc;
 
 namespace Starter
 {
-    public class MvcApplication : System.Web.HttpApplication
-    {
-        protected void Application_Start()
-        {
-            ModelMetadataProviders.Current = new DefaultToCamelCaseMetadataProvider();
-            AreaRegistration.RegisterAllAreas();
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
-        }
-    }
+	public class MvcApplication : System.Web.HttpApplication
+	{
+		protected void Application_Start()
+		{
+			AutomapperConfig.ConfigureMappings();
+			ModelMetadataProviders.Current = new DefaultToCamelCaseMetadataProvider();
+			AreaRegistration.RegisterAllAreas();
+			RouteConfig.RegisterRoutes(RouteTable.Routes);
+			BundleConfig.RegisterBundles(BundleTable.Bundles);
+		}
+	}
 }

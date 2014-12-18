@@ -1,0 +1,16 @@
+﻿@using Starter.Code.Mvc
+@model Starter.Controllers.ViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form>
+	<div>
+		@Html.DropDownListFor(d => d.SelectedRegion, Model.Regions)
+	</div>
+	<div>
+		@Html.MakeInputTextGroup()
+	</div>
+	<input type="submit" value="Submit	"/>
+</form>

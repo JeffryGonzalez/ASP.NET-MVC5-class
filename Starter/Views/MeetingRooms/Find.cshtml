@@ -1,0 +1,32 @@
+﻿@model Starter.Controllers.MeetingRoomFindViewModel
+@{
+	ViewBag.Title = "Find";
+}
+
+<h2>Find Stuff</h2>
+<form method="POST">
+	<div>
+		Available Date: @Html.EditorFor(m => m.Query.AvailableDate)
+	</div>
+	<div>
+		Minimum Number of People: @Html.EditorFor(m => m.Query.MinCapacity)
+	</div>
+	<div>
+		<ul class="list-unstyled list-inline">
+			@foreach (var c in Model.Query.Capabilities)
+			{
+				<li class="list-group-item-info">
+
+					<input type="checkbox"
+								 name="AvailableCapabilities" value="@c.Id" id="@c.Id"
+								 @{if (Model.AvailableCapabilities.Any(x=>c.Id==x)) { <text> checked='checked' </text>   } } />
+					<label for="@c.Id">@c.Description</label>
+
+				</li>
+
+			}
+		</ul>
+	</div>
+	<input type="submit" value="Search" />
+</form>
+
